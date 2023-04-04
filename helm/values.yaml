@@ -1,0 +1,6 @@
+revision: latest
+name: buildkite-agent-metrics
+namespace: buildkite
+deployment:
+  replicas: 1
+imagePullPolicy: IfNotPresent
