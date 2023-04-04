@@ -3,4 +3,5 @@ name: buildkite-agent-metrics
 namespace: buildkite
 deployment:
   replicas: 1
+  image: buildkite-agent-metrics
 imagePullPolicy: IfNotPresent
