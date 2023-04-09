@@ -20,10 +20,8 @@ spec:
           image: {{ .Values.deployment.image }}
           imagePullPolicy: {{ .Values.imagePullPolicy }}
           args:
-            - /buildkite-agent-metrics
-            - -interval
-            - 30s
-            - -queue
-            - my-queue1
-            - -token
-            - abc123
+            - -interval={{ .Values.deployment.buildkiteInterval }}
+            - -queue={{ .Values.deployment.buildkiteQueue }}
+            - -backend={{ .Values.deployment.buildkiteBackend }}
+            - -prometheus-addr={{ .Values.deployment.prometheusAddress }}
+            - -prometheus-path={{ .Values.deployment.prometheusPath }}

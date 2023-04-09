@@ -4,4 +4,9 @@ namespace: buildkite
 deployment:
   replicas: 1
   image: buildkite-agent-metrics
+  buildkiteQueue: test
+  buildkiteBackend: prometheus
+  buildkiteInterval: 30s
+  prometheusAddress: localhost:8080
+  prometheusPath: /metrics
 imagePullPolicy: IfNotPresent
