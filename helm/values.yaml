@@ -7,6 +7,6 @@ deployment:
   buildkiteQueue: test
   buildkiteBackend: prometheus
   buildkiteInterval: 30s
-  prometheusAddress: localhost:8080
+  prometheusAddress: :8080
   prometheusPath: /metrics
 imagePullPolicy: IfNotPresent
